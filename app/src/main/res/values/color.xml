@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ColorPrimary">#2d4064</color>
+    <color name="ColorPrimaryDark">#233454</color>
+    <color name="ColorPrimaryLight">#ff319ac7</color>
+    <color name="tabsScrollColor">#ff319ac7</color>
+    <color name="FabColor">#2d4064</color>
+    <color name="colorAccent">#ff319ac7</color>
+
+    <color name="app_screens_bg">#ffffff</color>
+    <color name="app_screens_bg_grey">#f1f1f1</color>
+
+    <color name="light_grey">#9E9E9E</color>
+
+
+    <color name="ErrorColor">#ffC62828</color>
+    <color name="ConfirmColor">#ff43A047</color>
+    <color name="TextColor">#ff333333</color>
+    <color name="TextColorTrans">#aaaaaa</color>
+    <color name="LightTextColor">#ffffffff</color>
+
+    <color name="refresh_progress_1">@color/colorAccent</color>
+    <color name="refresh_progress_2">@color/ColorPrimaryDark</color>
+    <color name="refresh_progress_3">@color/ColorPrimary</color>
+</resources>

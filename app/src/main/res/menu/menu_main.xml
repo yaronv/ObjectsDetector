@@ -1,0 +1,61 @@
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <!--<item-->
+        <!--android:id="@+id/action_settings"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="@string/action_settings"-->
+        <!--app:showAsAction="never" />-->
+    <!--<item-->
+        <!--android:id="@+id/action_camera"-->
+        <!--android:orderInCategory="200"-->
+        <!--android:title="Picture groceries"-->
+        <!--android:icon="@drawable/ic_action_camera"-->
+        <!--app:showAsAction="ifRoom"-->
+        <!--></item>-->
+    <!--<item-->
+        <!--android:id="@+id/action_search"-->
+        <!--android:orderInCategory="200"-->
+        <!--android:title="@string/action_search"-->
+        <!--android:icon="@drawable/ic_action_search"-->
+        <!--app:showAsAction="ifRoom"-->
+        <!--></item>-->
+    <!--<item-->
+        <!--android:id="@+id/action_user"-->
+        <!--android:orderInCategory="300"-->
+        <!--android:title="Profile"-->
+        <!--android:icon="@drawable/ic_action_user"-->
+        <!--app:showAsAction="ifRoom"></item>-->
+
+    <item
+        android:id="@+id/action_about"
+        android:title="@string/action_about"
+        app:showAsAction="never"
+        android:orderInCategory="200"/>
+
+    <item
+        android:id="@+id/action_privacy"
+        android:title="@string/action_privacy"
+        app:showAsAction="never"
+        android:orderInCategory="200"/>
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="200"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_feedback"
+        android:title="@string/action_feedback"
+        app:showAsAction="never"
+        android:orderInCategory="300"/>
+
+    <item
+        android:id="@+id/action_rate"
+        android:title="@string/action_rate"
+        android:orderInCategory="400"
+        app:showAsAction="never"/>
+</menu>

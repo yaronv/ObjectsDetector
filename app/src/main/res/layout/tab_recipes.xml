@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto">
+
+    <!--<ImageView-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:src="@drawable/image_ph"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:gravity="center"-->
+        <!--android:padding="10dp"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:id="@+id/image_placeholder"/>-->
+
+    <org.opencv.android.JavaCameraView
+        android:id="@+id/live_camera_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        />
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:src="@drawable/image_ph"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:gravity="center"-->
+        <!--android:padding="1dp"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:id="@+id/image_placeholder"-->
+        <!--android:visibility="invisible"-->
+        <!--android:background="@color/FabColor"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginBottom="10dp" />-->
+
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="20dp"-->
+        <!--android:fontFamily="sans-serif-light"-->
+        <!--android:gravity="center"-->
+        <!--android:text="Upload Image"-->
+        <!--android:textColor="@color/light_grey"-->
+        <!--android:id="@+id/noImageText"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:visibility="invisible"/>-->
+
+    <!--<ImageView-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:src="@drawable/chef_icon"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:gravity="bottom"-->
+        <!--android:visibility="invisible"-->
+        <!--android:id="@+id/analyze_icon"/>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="85dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="5"
+        android:textColor="@color/LightTextColor"
+        android:id="@+id/counter"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/analyze_progress"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_vertical"
+        wheel:matProg_barColor="@color/LightTextColor"
+        wheel:matProg_progressIndeterminate="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>
