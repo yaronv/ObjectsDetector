@@ -22,7 +22,12 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager pager;
     private ViewPagerAdapter adapter;
     private TabLayout tabs;
-    private CharSequence tabsTitles[] = {"", ""};
+    private CharSequence tabsTitles[] = {"", "", ""};
+    private int[] tabIcons = {
+            R.drawable.ic_videocam_white_24dp,
+            R.drawable.ic_list_white_24dp,
+            R.drawable.ic_favorite_white_24dp
+    };
 
 
     @Override
@@ -35,19 +40,29 @@ public class MainActivity extends AppCompatActivity {
 
         tabsTitles[0] = getResources().getString(R.string.tab1_title);
         tabsTitles[1] = getResources().getString(R.string.tab2_title);
+        tabsTitles[2] = getResources().getString(R.string.tab3_title);
 
 //        toolbar = (Toolbar) findViewById(R.id.tool_bar);
 //        setSupportActionBar(toolbar);
 
-        adapter = new ViewPagerAdapter(getSupportFragmentManager(), tabsTitles, tabsTitles.length);
+        adapter = new ViewPagerAdapter(getSupportFragmentManager(), tabsTitles, tabIcons, tabsTitles.length, this);
 
         pager = (ViewPager) findViewById(R.id.pager);
         pager.setAdapter(adapter);
 
         tabs = (TabLayout) findViewById(R.id.tabs);
 
-        // Setting the ViewPager For the SlidingTabsLayout
         tabs.setupWithViewPager(pager);
+
+        // Iterate over all tabs and set the custom view
+        for (int i = 0; i < tabs.getTabCount(); i++) {
+            TabLayout.Tab tab = tabs.getTabAt(i);
+            tab.setCustomView(adapter.getTabView(i));
+        }
+
+//        tabs.getTabAt(0).setIcon(tabIcons[0]);
+//        tabs.getTabAt(1).setIcon(tabIcons[1]);
+//        tabs.getTabAt(2).setIcon(tabIcons[2]);
 
     }
 

@@ -16,6 +16,7 @@
 
     <string name="tab1_title">Live</string>
     <string name="tab2_title">Results</string>
+    <string name="tab3_title">Fav</string>
 
     <string name="error_take_photo">Unable to take photo from camera</string>
     <string name="error_select_photo">Unable to select photo from gallery</string>
