@@ -4,8 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import yv.recipe.fragments.TabPopulars;
-import yv.recipe.fragments.TabRecipes;
+import yv.recipe.fragments.TabLive;
+import yv.recipe.fragments.TabResults;
 
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
@@ -29,12 +29,12 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
         if(position == 0) // if the position is 0 we are returning the First tab
         {
-            TabRecipes tab1 = new TabRecipes();
+            TabLive tab1 = new TabLive();
             return tab1;
         }
         else             // As we are having 2 tabs if the position is now 0 it must be 1 so we are returning second tab
         {
-            TabPopulars tab2 = new TabPopulars();
+            TabResults tab2 = new TabResults();
             return tab2;
         }
 

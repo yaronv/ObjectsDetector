@@ -12,8 +12,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -27,13 +25,13 @@ import org.opencv.android.LoaderCallbackInterface;
 import org.opencv.android.OpenCVLoader;
 import org.opencv.core.Core;
 import org.opencv.core.CvType;
-import org.opencv.features2d.KeyPoint;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfKeyPoint;
 import org.opencv.core.MatOfPoint;
 import org.opencv.core.Rect;
 import org.opencv.core.Scalar;
 import org.opencv.features2d.FeatureDetector;
+import org.opencv.features2d.KeyPoint;
 import org.opencv.imgproc.Imgproc;
 
 import java.util.ArrayList;
@@ -42,7 +40,7 @@ import java.util.List;
 import yv.recipe.R;
 import yv.recipe.utils.ImageProccessingService;
 
-public class TabRecipes extends Fragment implements  CameraBridgeViewBase.CvCameraViewListener2 {
+public class TabLive extends Fragment implements  CameraBridgeViewBase.CvCameraViewListener2 {
 
     private static final String TAG = "TabRecipe";
 
@@ -78,7 +76,7 @@ public class TabRecipes extends Fragment implements  CameraBridgeViewBase.CvCame
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v =inflater.inflate(R.layout.tab_recipes,container,false);
+        View v =inflater.inflate(R.layout.tab_live,container,false);
 
         mOpenCvCameraView = (CameraBridgeViewBase) v.findViewById(R.id.live_camera_frame);
         mOpenCvCameraView.setCvCameraViewListener(this);
@@ -116,6 +114,7 @@ public class TabRecipes extends Fragment implements  CameraBridgeViewBase.CvCame
                                 COUNT_DOWN = 5;
                                 counter.setVisibility(View.GONE);
                                 progress.setVisibility(View.VISIBLE);
+                                mOpenCvCameraView.disableView();
                                 isProcess = false;
                             }
                         }

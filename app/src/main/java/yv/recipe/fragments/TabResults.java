@@ -9,11 +9,11 @@ import android.view.ViewGroup;
 
 import yv.recipe.R;
 
-public class TabPopulars extends Fragment {
+public class TabResults extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.tab_populars,container,false);
+        View v = inflater.inflate(R.layout.tab_results,container,false);
         return v;
     }
 }
