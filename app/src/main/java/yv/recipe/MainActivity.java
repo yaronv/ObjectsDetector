@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabs;
     private CharSequence tabsTitles[] = {"", "", ""};
     private int[] tabIcons = {
-            R.drawable.ic_videocam_white_24dp,
-            R.drawable.ic_list_white_24dp,
-            R.drawable.ic_favorite_white_24dp
+            R.drawable.ic_videocam_white_18dp,
+            R.drawable.ic_view_list_white_18dp,
+            R.drawable.ic_favorite_white_18dp
     };
 
 
