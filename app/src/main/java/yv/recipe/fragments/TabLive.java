@@ -42,7 +42,7 @@ import yv.recipe.utils.ImageProccessingService;
 
 public class TabLive extends Fragment implements  CameraBridgeViewBase.CvCameraViewListener2 {
 
-    private static final String TAG = "TabRecipe";
+    private static final String TAG = "TabLive";
 
     private int COUNT_DOWN = 5;
 
@@ -177,17 +177,8 @@ public class TabLive extends Fragment implements  CameraBridgeViewBase.CvCameraV
     @Override
     public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame) {
 
-        //
         mRgba = inputFrame.rgba();
         mGray = inputFrame.gray();
-
-//        Mat mRgbaT = mRgba.t();
-//        Core.flip(mRgba.t(), mRgbaT, 1);
-//        Imgproc.resize(mRgbaT, mRgbaT, mRgba.size());
-//
-//        Mat mGrayT = mGray.t();
-//        Core.flip(mGray.t(), mGrayT, 1);
-//        Imgproc.resize(mGrayT, mGrayT, mGray.size());
 
 
         CONTOUR_COLOR = new Scalar(255);
@@ -239,19 +230,7 @@ public class TabLive extends Fragment implements  CameraBridgeViewBase.CvCameraV
                 roi.setTo(CONTOUR_COLOR);
 
             }
-            /*
-			 * Imgproc.findContours(mask, contour1, hierarchy,
-			 * Imgproc.RETR_EXTERNAL, Imgproc.CHAIN_APPROX_NONE);
-			 *
-			 *
-			 * for (int ind = 0; ind < contour1.size(); ind++) { rectan2 =
-			 * Imgproc.boundingRect(contour1.get(ind)); if (rectan2.area() > 0.3
-			 * * imgsize || rectan2.area() < 50 || (rectan2.width /
-			 * rectan2.height) > 3 || (rectan2.width / rectan2.height) < 0.1) {
-			 * Mat roi = new Mat(mask, rectan2); roi.setTo(zeos);
-			 *
-			 * } }
-			 */
+
             Imgproc.morphologyEx(mask, morbyte, Imgproc.MORPH_DILATE, kernel);
             Imgproc.findContours(morbyte, contour2, hierarchy,
                     Imgproc.RETR_EXTERNAL, Imgproc.CHAIN_APPROX_NONE);
@@ -269,13 +248,6 @@ public class TabLive extends Fragment implements  CameraBridgeViewBase.CvCameraV
 
             return mRgba;
         }
-		/*
-		 * Features2d.drawKeypoints(mGray, keypoint, output, new Scalar(2, 254,
-		 * 255), Features2d.DRAW_RICH_KEYPOINTS);
-		 */
-        // DescriptorExtractor
-        // descriptor=DescriptorExtractor.create(DescriptorExtractor.SIFT);
-        // descriptor.compute(mRgba, keypoint, mask);
 
         return mRgba;
     }
